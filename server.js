@@ -5,7 +5,7 @@ const layouts = require('express-ejs-layouts');
 app.set("view engine", "ejs");
 app.use(layouts);
 
-var contact = {
+var contactInfo = {
 	name: "Steve Peters",
 	email: "steve@steve.com",
 	phone: "206-555-1212",
@@ -19,7 +19,7 @@ app.get('/', function(req,res) {
 });
 
 app.get('/contact', function(req, res) {
-    res.render('contact', {contact});
+    res.render('contactEJS', {contactInfo});
 });
 
 app.get('/skills', function(req, res) {
